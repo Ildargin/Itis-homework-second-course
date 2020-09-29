@@ -16,6 +16,13 @@ public class Main {
         Optional<User> userOptionalTwo = storage.findUserByName("Marsel");
         System.out.println(userOptionalTwo.get() + "\n");
 
+        // AllByAge
+        Optional<User[]> userOptionalThree = storage.findAllByAge((short) 19);
+        for (User usr : userOptionalThree.get()){
+            System.out.println(usr);
+        }
+        System.out.println();
+
         // ALL
         Optional<User[]> usersOptional = storage.findAll();
         for (User usr : usersOptional.get()){

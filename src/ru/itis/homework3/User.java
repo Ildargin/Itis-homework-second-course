@@ -1,14 +1,22 @@
 package ru.itis.homework3;
 
 public class User {
-    private Long id;
+    private long id;
+    private Short age;
     private String firstName;
     private String lastName;
 
-    public User(Long id, String firstName, String lastName) {
+    public User(long id, short age, String firstName, String lastName) {
+        this.age = age;
         this.id = id;
         this.firstName = firstName.trim();
         this.lastName = lastName.trim();
+    }
+
+    public Short getAge() { return age; }
+
+    public void setAge(Short id) {
+        this.id = id;
     }
 
     public Long getId() {
@@ -35,9 +43,10 @@ public class User {
         this.lastName = lastName;
     }
 
+
     @Override
     public String toString() {
-        return (id.toString() + " " + getFirstName() + " " + getLastName());
+        return (getId().toString()  + " " + getFirstName() + " " + getLastName() + " " + getAge().toString());
     }
 }
 

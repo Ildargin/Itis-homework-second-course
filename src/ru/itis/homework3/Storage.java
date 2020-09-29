@@ -7,5 +7,6 @@ public interface Storage {
     Optional<User> findUserById(Long id);
     Optional<User> findUserByName(String name);
     Optional<User[]> findAll();
+    Optional<User[]> findAllByAge(Short age);
 }
 
