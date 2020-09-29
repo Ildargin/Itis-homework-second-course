@@ -3,27 +3,40 @@
 
 table example:
 
-| id | first_name | last_name   |
-|----|------------|-------------|
-| 1  | Marsel     | Sidikov     |
-| 2  | Ildar      | Gainatullin |
-| 3  | Vitaliy    | Dubrovets   |
-| 4  | Azat       | Nabiev      |
-
+| id | first_name | last_name   | age         |
+|----|------------|-------------|-------------|
+| 1  | Marsel     | Sidikov     | 27          |
+| 2  | Ildar      | Gainatullin | 18          |
+| 3  | Vitaliy    | Dubrovets   | 19          |
+| 4  | Azat       | Nabiev      | 19          |
+| 5  | Felix      | Nabiev      | 19          |
+| 5  | Kamil      | Nabiev      | 19          |
 program execution example: 
 
 ```java
 Testing connection to PostgreSQL JDBC
 PostgreSQL JDBC Driver successfully connected
 You successfully connected to database now
-3 Vitaliy Dubrovets
 
-1 Marsel Sidikov
+//ID = 3
+3 Vitaliy Dubrovets 18
 
-1 Marsel Marsel
-2 Ildar Ildar
-3 Vitaliy Vitaliy
-4 Azat Azat
+//UserName = "Marsel"
+1 Marsel Sidikov 27
+
+//All by age = 19
+2 Ildar Gainatullin 19
+4 Azat Nabiev 19
+5 Felix Rosenberg 19
+6 Kamil Axanov 19
+
+//All 
+2 Ildar Gainatullin 19
+1 Marsel Sidikov 27
+4 Azat Nabiev 19
+5 Felix Rosenberg 19
+6 Kamil Axanov 19
+3 Vitaliy Dubrovets 18
 
 Process finished with exit code 0
 ```
