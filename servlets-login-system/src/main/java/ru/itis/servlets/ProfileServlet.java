@@ -10,7 +10,7 @@ import javax.servlet.http.*;
 import java.sql.*;
 
 
-@WebServlet("/profile")
+@WebServlet("/signup")
 public class ProfileServlet extends HttpServlet {
     private static final String DB_URL = "";
     private static final String DB_USERNAME = "";
@@ -40,10 +40,12 @@ public class ProfileServlet extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException {
         String firstName = request.getParameter("first_name");
         String lastName = request.getParameter("last_name");
-        System.out.println(firstName + " " + lastName);
+        String password = request.getParameter("password");
+        String email = request.getParameter("email");
+        System.out.println(firstName + " " + lastName + password + email);
     }
 }
 
