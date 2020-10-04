@@ -1,26 +1,16 @@
 package ru.itis.models;
 
 public class User {
-    private Integer id;
     private String email;
     private String firstName;
     private String lastName;
     private String password;
 
-    public User(int id, String email, String firstName, String lastName, String password) {
-        this.id = id;
+    public User(String email, String firstName, String lastName, String password) {
         this.email = email;
         this.firstName = firstName;
         this.lastName = lastName;
         this.password = password;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getEmail() {
@@ -57,7 +47,7 @@ public class User {
 
     @Override
     public String toString() {
-        return (getId().toString() + " " + getFirstName() + " " + getLastName() + " " + getPassword());
+        return (  " " + getFirstName() + " " + getLastName() + " " + getPassword());
     }
 
 }
